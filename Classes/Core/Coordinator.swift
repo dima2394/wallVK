@@ -27,6 +27,7 @@ class Coordinator<ViewController: UIViewController>: NSObject, CoordinatorProtoc
 
     init(rootViewController: ViewController) {
         self.rootViewController = rootViewController
+        self.rootViewController.view.backgroundColor = .white
         if let navigationController = rootViewController as? UINavigationController {
             self.initialViewControllers = WeakArray(navigationController.viewControllers)
         } else {
@@ -62,7 +63,7 @@ class Coordinator<ViewController: UIViewController>: NSObject, CoordinatorProtoc
     }
 
     func remove(childCoordinator: CoordinatorProtocol) {
-        if let index = childCoordinators.index(where: { $0 === childCoordinator }) {
+        if let index = childCoordinators.firstIndex(where: { $0 === childCoordinator }) {
             childCoordinators.remove(at: index)
         }
     }

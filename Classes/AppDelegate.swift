@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import VKSdkFramework
 
 typealias LaunchOptions = [UIApplication.LaunchOptionsKey: Any]
 
@@ -21,6 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         appCoordinator.start(launchOptions: launchOptions)
+
+        return true
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+
+        for (_, value) in options {
+
+            if let value = value as? UIApplication.OpenURLOptionsKey {
+                return VKSdk.processOpen(url, fromApplication: value.rawValue)
+            }
+        }
 
         return true
     }

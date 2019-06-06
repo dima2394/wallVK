@@ -3,34 +3,33 @@
 //  Copyright © 2019 dverennik. All rights reserved.
 //
 
-typealias HasServices = Any
+typealias HasServices = HasRealmService &
+                        HasVKService
 
-private typealias HasPersistentServices = Any
+private typealias HasPersistentServices = HasRealmService
 
 // MARK: - Singletone Services
 
 private final class PersistentServiceContainer: HasPersistentServices {
 
     static var instance: PersistentServiceContainer = .init()
+
+    var realmService: RealmServiceProtocol {
+        return RealmService()
+    }
     
     private init() {}
-    
-    /// Lazy service instances with dependencies from regular service container
-    ///
-    /// lazy var sessionService: SessionServiceProtocol = {
-    ///     return SessionService(keychainService: ServiceContainer().keychainService)
-    /// }()
 }
 
 // MARK: - Regular Services
 
 final class ServiceContainer: HasServices {
-    
-    /// lazy var keychainService: KeychainServiceProtocol = {
-    ///     return KeychainService()
-    /// }()
-    
-    /// var sessionService: SessionServiceProtocol {
-    ///     return PersistentServiceContainer.instance.sessionService
-    /// }
+
+    var realmService: RealmServiceProtocol {
+        return PersistentServiceContainer.instance.realmService
+    }
+
+    var vkService: VKServiceProtocol {
+        return VKService(realmService: realmService)
+    }
 }

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		060F086D1E4D6C9200D9166F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060F085B1E4D6C9200D9166F /* AppDelegate.swift */; };
 		060F08711E4D6C9200D9166F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060F08651E4D6C9200D9166F /* Assets.xcassets */; };
-		060F08731E4D6C9200D9166F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 060F08691E4D6C9200D9166F /* LaunchScreen.storyboard */; };
-		063834571F6F62AC0057A831 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063834561F6F62AC0057A831 /* ViewController.swift */; };
 		066238161F879B4D00AA6B14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066238181F879B4D00AA6B14 /* Localizable.strings */; };
 		06DAD03A1F4E95B700FD62BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06DAD0391F4E95B700FD62BD /* Settings.bundle */; };
 		06E0EBD11FAC0BB4002715AE /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E0EBD01FAC0BB4002715AE /* AppConfigurator.swift */; };
@@ -19,6 +17,43 @@
 		6D6D7E9921F73C90000FFA4D /* ViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D7E9821F73C90000FFA4D /* ViewUpdatable.swift */; };
 		6D6D7EA221F743FA000FFA4D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D7EA121F743F9000FFA4D /* Services.swift */; };
 		6D7F58AF22647B89001E2906 /* WeakArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F58AE22647B89001E2906 /* WeakArray.swift */; };
+		7644588A22A92208005054F3 /* UICollectionView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644588922A92208005054F3 /* UICollectionView+Sugar.swift */; };
+		7644588C22A922E1005054F3 /* VkWallCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644588B22A922E1005054F3 /* VkWallCollectionViewCellModel.swift */; };
+		7644588E22A929F8005054F3 /* Date+PrettyFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644588D22A929F8005054F3 /* Date+PrettyFormat.swift */; };
+		7644589022A92CCC005054F3 /* Realm+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644588F22A92CCC005054F3 /* Realm+Result.swift */; };
+		7644589222A93187005054F3 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7644589122A93187005054F3 /* Nuke.framework */; };
+		7644589422A9319C005054F3 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644589322A9319C005054F3 /* UIImageView+Nuke.swift */; };
+		768092B022A844D0008C507F /* VkWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AA22A844D0008C507F /* VkWallViewModel.swift */; };
+		768092B122A844D0008C507F /* VkWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AB22A844D0008C507F /* VkWallViewController.swift */; };
+		768092B222A844D0008C507F /* VkWallState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AD22A844D0008C507F /* VkWallState.swift */; };
+		768092B322A844D0008C507F /* VkWallModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AE22A844D0008C507F /* VkWallModule.swift */; };
+		768092B422A844D0008C507F /* VkWallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AF22A844D0008C507F /* VkWallPresenter.swift */; };
+		768092B722A84A5A008C507F /* VkWallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092B622A84A5A008C507F /* VkWallCollectionViewCell.swift */; };
+		768092B922A84C07008C507F /* UIView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092B822A84C07008C507F /* UIView+Sugar.swift */; };
+		768092BB22A856ED008C507F /* WallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092BA22A856EC008C507F /* WallModel.swift */; };
+		768092BE22A85F0E008C507F /* WallResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092BD22A85F0E008C507F /* WallResponse.swift */; };
+		768092C022A85FE5008C507F /* LikesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092BF22A85FE5008C507F /* LikesModel.swift */; };
+		768092C222A86002008C507F /* RepostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092C122A86002008C507F /* RepostsModel.swift */; };
+		768092C422A86019008C507F /* AttachmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092C322A86019008C507F /* AttachmentModel.swift */; };
+		768092C622A86056008C507F /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092C522A86056008C507F /* PhotoModel.swift */; };
+		768092C922A86259008C507F /* AttachmentTypeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092C822A86259008C507F /* AttachmentTypeTransform.swift */; };
+		768092D422A86EA3008C507F /* WallRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092D322A86EA3008C507F /* WallRealmModel.swift */; };
+		76DE370422A8297100D9E987 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DE36FF22A8297000D9E987 /* RealmSwift.framework */; };
+		76DE370522A8297100D9E987 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DE370022A8297100D9E987 /* Alamofire.framework */; };
+		76DE370622A8297100D9E987 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DE370122A8297100D9E987 /* Realm.framework */; };
+		76DE370722A8297100D9E987 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DE370222A8297100D9E987 /* ObjectMapper.framework */; };
+		76DE370822A8297100D9E987 /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DE370322A8297100D9E987 /* VKSdkFramework.framework */; };
+		76DE371222A8302700D9E987 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE370C22A8302700D9E987 /* AuthorizationPresenter.swift */; };
+		76DE371322A8302700D9E987 /* AuthorizationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE370E22A8302700D9E987 /* AuthorizationState.swift */; };
+		76DE371422A8302700D9E987 /* AuthorizationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE370F22A8302700D9E987 /* AuthorizationModule.swift */; };
+		76DE371522A8302700D9E987 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE371022A8302700D9E987 /* AuthorizationViewController.swift */; };
+		76DE371622A8302700D9E987 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE371122A8302700D9E987 /* AuthorizationViewModel.swift */; };
+		76DE371722A8326A00D9E987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 060F08691E4D6C9200D9166F /* LaunchScreen.storyboard */; };
+		76DE371922A835A100D9E987 /* Framezilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DE371822A835A100D9E987 /* Framezilla.framework */; };
+		76F872EE22A9644100673409 /* RealmServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F872ED22A9644100673409 /* RealmServiceProtocol.swift */; };
+		76F872F022A9646300673409 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F872EF22A9646300673409 /* RealmService.swift */; };
+		76F872F222A9656F00673409 /* VKServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F872F122A9656F00673409 /* VKServiceProtocol.swift */; };
+		76F872F422A9659300673409 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F872F322A9659300673409 /* VKService.swift */; };
 		932E63D421B00E85007FCABB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E63D321B00E85007FCABB /* Coordinator.swift */; };
 		93CD9BCD21B01A1A009DFF81 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CD9BCC21B01A1A009DFF81 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -26,20 +61,54 @@
 /* Begin PBXFileReference section */
 		060F08441E4D6B3900D9166F /* WallVk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallVk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		060F085B1E4D6C9200D9166F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		060F08651E4D6C9200D9166F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		060F08691E4D6C9200D9166F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		060F087C1E4D702C00D9166F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		063834561F6F62AC0057A831 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		066238171F879B4D00AA6B14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		06DAD0391F4E95B700FD62BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		06E0EBD01FAC0BB4002715AE /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		06E0EBD21FAC0D4B002715AE /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		06E0EBD41FAC0D97002715AE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
-		060F08651E4D6C9200D9166F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D35B599216B646F00C72B29 /* Bundle+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
 		6D3A04212170BE03007B6860 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		6D6D7E9821F73C90000FFA4D /* ViewUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUpdatable.swift; sourceTree = "<group>"; };
 		6D6D7EA121F743F9000FFA4D /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		6D7F58AE22647B89001E2906 /* WeakArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakArray.swift; sourceTree = "<group>"; };
+		7644588922A92208005054F3 /* UICollectionView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Sugar.swift"; sourceTree = "<group>"; };
+		7644588B22A922E1005054F3 /* VkWallCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkWallCollectionViewCellModel.swift; sourceTree = "<group>"; };
+		7644588D22A929F8005054F3 /* Date+PrettyFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+PrettyFormat.swift"; sourceTree = "<group>"; };
+		7644588F22A92CCC005054F3 /* Realm+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Result.swift"; sourceTree = "<group>"; };
+		7644589122A93187005054F3 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
+		7644589322A9319C005054F3 /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
+		768092AA22A844D0008C507F /* VkWallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallViewModel.swift; sourceTree = "<group>"; };
+		768092AB22A844D0008C507F /* VkWallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallViewController.swift; sourceTree = "<group>"; };
+		768092AD22A844D0008C507F /* VkWallState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallState.swift; sourceTree = "<group>"; };
+		768092AE22A844D0008C507F /* VkWallModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallModule.swift; sourceTree = "<group>"; };
+		768092AF22A844D0008C507F /* VkWallPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallPresenter.swift; sourceTree = "<group>"; };
+		768092B622A84A5A008C507F /* VkWallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkWallCollectionViewCell.swift; sourceTree = "<group>"; };
+		768092B822A84C07008C507F /* UIView+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Sugar.swift"; sourceTree = "<group>"; };
+		768092BA22A856EC008C507F /* WallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallModel.swift; sourceTree = "<group>"; };
+		768092BD22A85F0E008C507F /* WallResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallResponse.swift; sourceTree = "<group>"; };
+		768092BF22A85FE5008C507F /* LikesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesModel.swift; sourceTree = "<group>"; };
+		768092C122A86002008C507F /* RepostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostsModel.swift; sourceTree = "<group>"; };
+		768092C322A86019008C507F /* AttachmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentModel.swift; sourceTree = "<group>"; };
+		768092C522A86056008C507F /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		768092C822A86259008C507F /* AttachmentTypeTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentTypeTransform.swift; sourceTree = "<group>"; };
+		768092D322A86EA3008C507F /* WallRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallRealmModel.swift; sourceTree = "<group>"; };
+		76DE36FF22A8297000D9E987 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		76DE370022A8297100D9E987 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		76DE370122A8297100D9E987 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		76DE370222A8297100D9E987 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		76DE370322A8297100D9E987 /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
+		76DE370C22A8302700D9E987 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
+		76DE370E22A8302700D9E987 /* AuthorizationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationState.swift; sourceTree = "<group>"; };
+		76DE370F22A8302700D9E987 /* AuthorizationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationModule.swift; sourceTree = "<group>"; };
+		76DE371022A8302700D9E987 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		76DE371122A8302700D9E987 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		76DE371822A835A100D9E987 /* Framezilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Framezilla.framework; path = Carthage/Build/iOS/Framezilla.framework; sourceTree = "<group>"; };
+		76DE371A22A838A100D9E987 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		76F872ED22A9644100673409 /* RealmServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceProtocol.swift; sourceTree = "<group>"; };
+		76F872EF22A9646300673409 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		76F872F122A9656F00673409 /* VKServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServiceProtocol.swift; sourceTree = "<group>"; };
+		76F872F322A9659300673409 /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
 		932E63D321B00E85007FCABB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		93CD9BCC21B01A1A009DFF81 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +118,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DE370422A8297100D9E987 /* RealmSwift.framework in Frameworks */,
+				76DE370522A8297100D9E987 /* Alamofire.framework in Frameworks */,
+				76DE370622A8297100D9E987 /* Realm.framework in Frameworks */,
+				76DE370722A8297100D9E987 /* ObjectMapper.framework in Frameworks */,
+				76DE370822A8297100D9E987 /* VKSdkFramework.framework in Frameworks */,
+				76DE371922A835A100D9E987 /* Framezilla.framework in Frameworks */,
+				7644589222A93187005054F3 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +138,7 @@
 				060F08641E4D6C9200D9166F /* Resources */,
 				060F087B1E4D702C00D9166F /* WallVk */,
 				060F08451E4D6B3900D9166F /* Products */,
+				76DE36FE22A8297000D9E987 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +175,8 @@
 		060F085F1E4D6C9200D9166F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				76F872F522A965C200673409 /* Vk */,
+				7687655D22A9640B003AD979 /* Realm */,
 				6D6D7EA121F743F9000FFA4D /* Services.swift */,
 			);
 			path = Services;
@@ -115,7 +194,8 @@
 		060F08621E4D6C9200D9166F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				063834561F6F62AC0057A831 /* ViewController.swift */,
+				76DE370B22A8302700D9E987 /* Authrization */,
+				768092A922A844D0008C507F /* VkWall */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -133,6 +213,10 @@
 		060F08761E4D6CDF00D9166F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				768092CC22A86961008C507F /* Realm */,
+				768092BC22A85EF5008C507F /* Responses */,
+				768092C722A8624B008C507F /* Transforms */,
+				768092CB22A86802008C507F /* Objects */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,11 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				06E0EBD21FAC0D4B002715AE /* Cartfile */,
-				06E0EBD41FAC0D97002715AE /* .swiftlint.yml */,
 				060F087C1E4D702C00D9166F /* Info.plist */,
 				06DAD0391F4E95B700FD62BD /* Settings.bundle */,
 			);
-			path = "WallVk";
+			path = WallVk;
 			sourceTree = "<group>";
 		};
 		060F089C1E4D79C000D9166F /* Core */ = {
@@ -159,17 +242,15 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		06A610D91FAC373B009A918A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6D35B598216B5E3A00C72B29 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				6D35B599216B646F00C72B29 /* Bundle+Info.swift */,
+				768092B822A84C07008C507F /* UIView+Sugar.swift */,
+				7644588922A92208005054F3 /* UICollectionView+Sugar.swift */,
+				7644588D22A929F8005054F3 /* Date+PrettyFormat.swift */,
+				7644588F22A92CCC005054F3 /* Realm+Result.swift */,
+				7644589322A9319C005054F3 /* UIImageView+Nuke.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -180,6 +261,124 @@
 				060F08691E4D6C9200D9166F /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		768092A922A844D0008C507F /* VkWall */ = {
+			isa = PBXGroup;
+			children = (
+				768092AA22A844D0008C507F /* VkWallViewModel.swift */,
+				768092AB22A844D0008C507F /* VkWallViewController.swift */,
+				768092AE22A844D0008C507F /* VkWallModule.swift */,
+				768092AF22A844D0008C507F /* VkWallPresenter.swift */,
+				768092B522A84A3F008C507F /* Cells */,
+				768092AC22A844D0008C507F /* State */,
+			);
+			path = VkWall;
+			sourceTree = "<group>";
+		};
+		768092AC22A844D0008C507F /* State */ = {
+			isa = PBXGroup;
+			children = (
+				768092AD22A844D0008C507F /* VkWallState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		768092B522A84A3F008C507F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				768092B622A84A5A008C507F /* VkWallCollectionViewCell.swift */,
+				7644588B22A922E1005054F3 /* VkWallCollectionViewCellModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		768092BC22A85EF5008C507F /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				768092BD22A85F0E008C507F /* WallResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		768092C722A8624B008C507F /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				768092C822A86259008C507F /* AttachmentTypeTransform.swift */,
+			);
+			path = Transforms;
+			sourceTree = "<group>";
+		};
+		768092CB22A86802008C507F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				768092C322A86019008C507F /* AttachmentModel.swift */,
+				768092BF22A85FE5008C507F /* LikesModel.swift */,
+				768092C522A86056008C507F /* PhotoModel.swift */,
+				768092C122A86002008C507F /* RepostsModel.swift */,
+				768092BA22A856EC008C507F /* WallModel.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		768092CC22A86961008C507F /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				768092D322A86EA3008C507F /* WallRealmModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		7687655D22A9640B003AD979 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				76F872ED22A9644100673409 /* RealmServiceProtocol.swift */,
+				76F872EF22A9646300673409 /* RealmService.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		76DE36FE22A8297000D9E987 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7644589122A93187005054F3 /* Nuke.framework */,
+				76DE371822A835A100D9E987 /* Framezilla.framework */,
+				76DE370022A8297100D9E987 /* Alamofire.framework */,
+				76DE370222A8297100D9E987 /* ObjectMapper.framework */,
+				76DE370122A8297100D9E987 /* Realm.framework */,
+				76DE36FF22A8297000D9E987 /* RealmSwift.framework */,
+				76DE370322A8297100D9E987 /* VKSdkFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76DE370B22A8302700D9E987 /* Authrization */ = {
+			isa = PBXGroup;
+			children = (
+				76DE370C22A8302700D9E987 /* AuthorizationPresenter.swift */,
+				76DE370F22A8302700D9E987 /* AuthorizationModule.swift */,
+				76DE371022A8302700D9E987 /* AuthorizationViewController.swift */,
+				76DE371122A8302700D9E987 /* AuthorizationViewModel.swift */,
+				76DE370D22A8302700D9E987 /* State */,
+			);
+			path = Authrization;
+			sourceTree = "<group>";
+		};
+		76DE370D22A8302700D9E987 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				76DE370E22A8302700D9E987 /* AuthorizationState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		76F872F522A965C200673409 /* Vk */ = {
+			isa = PBXGroup;
+			children = (
+				76F872F122A9656F00673409 /* VKServiceProtocol.swift */,
+				76F872F322A9659300673409 /* VKService.swift */,
+			);
+			path = Vk;
 			sourceTree = "<group>";
 		};
 		93CD9BCB21B01A05009DFF81 /* Coordinators */ = {
@@ -197,17 +396,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 060F08561E4D6B3900D9166F /* Build configuration list for PBXNativeTarget "WallVk" */;
 			buildPhases = (
+				060F087A1E4D6D2100D9166F /* Carthage */,
 				060F08401E4D6B3900D9166F /* Sources */,
 				060F08411E4D6B3900D9166F /* Frameworks */,
 				060F08421E4D6B3900D9166F /* Resources */,
-				060F08791E4D6CF100D9166F /* SwiftLint */,
-				060F087A1E4D6D2100D9166F /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "WallVk";
+			name = WallVk;
 			productName = WallVk;
 			productReference = 060F08441E4D6B3900D9166F /* WallVk.app */;
 			productType = "com.apple.product-type.application";
@@ -219,23 +417,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "dverennik";
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = dverennik;
 				TargetAttributes = {
 					060F08431E4D6B3900D9166F = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = C22RZK2BW2;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 060F083F1E4D6B3900D9166F /* Build configuration list for PBXProject "WallVk" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 060F083B1E4D6B3900D9166F;
 			productRefGroup = 060F08451E4D6B3900D9166F /* Products */;
@@ -253,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				066238161F879B4D00AA6B14 /* Localizable.strings in Resources */,
+				76DE371722A8326A00D9E987 /* LaunchScreen.storyboard in Resources */,
 				060F08711E4D6C9200D9166F /* Assets.xcassets in Resources */,
 				06DAD03A1F4E95B700FD62BD /* Settings.bundle in Resources */,
 			);
@@ -261,37 +462,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		060F08791E4D6CF100D9166F /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = ./Scripts/swiftlint_script.sh;
-			showEnvVarsInLog = 0;
-		};
 		060F087A1E4D6D2100D9166F /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/VKSdkFramework.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Framezilla.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 			);
 			name = Carthage;
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Realm.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RealmSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/VKSdkFramework.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Framezilla.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 			showEnvVarsInLog = 0;
 		};
-
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -299,16 +500,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063834571F6F62AC0057A831 /* ViewController.swift in Sources */,
+				768092C622A86056008C507F /* PhotoModel.swift in Sources */,
+				768092B022A844D0008C507F /* VkWallViewModel.swift in Sources */,
+				76DE371322A8302700D9E987 /* AuthorizationState.swift in Sources */,
+				768092C422A86019008C507F /* AttachmentModel.swift in Sources */,
 				6D7F58AF22647B89001E2906 /* WeakArray.swift in Sources */,
+				768092BB22A856ED008C507F /* WallModel.swift in Sources */,
+				76F872F422A9659300673409 /* VKService.swift in Sources */,
 				6D3A04222170BE06007B6860 /* AppConfiguration.swift in Sources */,
+				76DE371622A8302700D9E987 /* AuthorizationViewModel.swift in Sources */,
+				768092B122A844D0008C507F /* VkWallViewController.swift in Sources */,
 				932E63D421B00E85007FCABB /* Coordinator.swift in Sources */,
+				76F872F222A9656F00673409 /* VKServiceProtocol.swift in Sources */,
+				768092BE22A85F0E008C507F /* WallResponse.swift in Sources */,
+				7644589022A92CCC005054F3 /* Realm+Result.swift in Sources */,
 				6D6D7E9921F73C90000FFA4D /* ViewUpdatable.swift in Sources */,
+				768092B422A844D0008C507F /* VkWallPresenter.swift in Sources */,
 				6D6D7EA221F743FA000FFA4D /* Services.swift in Sources */,
+				768092C022A85FE5008C507F /* LikesModel.swift in Sources */,
+				768092D422A86EA3008C507F /* WallRealmModel.swift in Sources */,
+				76DE371222A8302700D9E987 /* AuthorizationPresenter.swift in Sources */,
+				768092B322A844D0008C507F /* VkWallModule.swift in Sources */,
 				6D35B59A216B647100C72B29 /* Bundle+Info.swift in Sources */,
+				7644588C22A922E1005054F3 /* VkWallCollectionViewCellModel.swift in Sources */,
+				7644588A22A92208005054F3 /* UICollectionView+Sugar.swift in Sources */,
 				060F086D1E4D6C9200D9166F /* AppDelegate.swift in Sources */,
+				76DE371422A8302700D9E987 /* AuthorizationModule.swift in Sources */,
+				76F872EE22A9644100673409 /* RealmServiceProtocol.swift in Sources */,
 				06E0EBD11FAC0BB4002715AE /* AppConfigurator.swift in Sources */,
+				768092B222A844D0008C507F /* VkWallState.swift in Sources */,
+				768092B922A84C07008C507F /* UIView+Sugar.swift in Sources */,
+				7644589422A9319C005054F3 /* UIImageView+Nuke.swift in Sources */,
+				768092B722A84A5A008C507F /* VkWallCollectionViewCell.swift in Sources */,
+				76DE371522A8302700D9E987 /* AuthorizationViewController.swift in Sources */,
+				76F872F022A9646300673409 /* RealmService.swift in Sources */,
 				93CD9BCD21B01A1A009DFF81 /* AppCoordinator.swift in Sources */,
+				7644588E22A929F8005054F3 /* Date+PrettyFormat.swift in Sources */,
+				768092C222A86002008C507F /* RepostsModel.swift in Sources */,
+				768092C922A86259008C507F /* AttachmentTypeTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +547,7 @@
 		066238181F879B4D00AA6B14 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				066238171F879B4D00AA6B14 /* en */,
+				76DE371A22A838A100D9E987 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -330,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -388,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -443,19 +674,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				"DEBUG_INFORMATION_FORMAT[sdk=iphoneos*]" = "dwarf-with-dsym";
 				"DEBUG_INFORMATION_FORMAT[sdk=iphonesimulator*]" = dwarf;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG_DEVELOPMENT DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Debug Development";
 		};
@@ -463,15 +700,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "ADHOC_DEVELOPMENT ADHOC";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "AdHoc Development";
 		};
@@ -479,6 +722,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -537,19 +781,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				"DEBUG_INFORMATION_FORMAT[sdk=iphoneos*]" = "dwarf-with-dsym";
 				"DEBUG_INFORMATION_FORMAT[sdk=iphonesimulator*]" = dwarf;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG_STAGING DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-0none";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Debug Staging";
 		};
@@ -557,6 +807,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -615,19 +866,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				"DEBUG_INFORMATION_FORMAT[sdk=iphoneos*]" = "dwarf-with-dsym";
 				"DEBUG_INFORMATION_FORMAT[sdk=iphonesimulator*]" = dwarf;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG_PRODUCTION DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Debug Production";
 		};
@@ -635,6 +892,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -688,15 +946,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "ADHOC_STAGING ADHOC";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.1;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "AdHoc Staging";
 		};
@@ -704,6 +968,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -757,15 +1022,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "ADHOC_PRODUCTION ADHOC";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "AdHoc Production";
 		};
@@ -773,6 +1044,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -826,14 +1098,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = AppStore;
 		};
@@ -841,6 +1119,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -896,16 +1175,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "WallVk/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C22RZK2BW2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = WallVk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dverennik.wallvk";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dverennik.wallvk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Analyze;
 		};

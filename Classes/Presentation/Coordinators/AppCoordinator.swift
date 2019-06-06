@@ -4,23 +4,66 @@
 //
 
 import UIKit
+import VKSdkFramework
 
 final class AppCoordinator: Coordinator<UINavigationController> {
 
-    typealias Dependencies = Any
-
-    private let dependencies: Dependencies
-
     // MARK: - Lifecycle
 
-    init(rootViewController: UINavigationController? = nil, dependencies: Dependencies = [Any]()) {
+    override init(rootViewController: UINavigationController? = nil) {
         let rootViewController = rootViewController ?? UINavigationController()
-        self.dependencies = dependencies
         super.init(rootViewController: rootViewController)
     }
 
     func start(launchOptions: LaunchOptions?) {
-        let viewController = ViewController()
-        rootViewController.setViewControllers([viewController], animated: false)
+        VKSdk.wakeUpSession(["wall"]) { state, error in
+            switch state {
+            case .authorized:
+                if let user = VKSdk.accessToken()?.localUser {
+                    self.startWallModule(withUser: user)
+                }
+                print("😇authorized")
+            case .initialized:
+                self.startAuthorizationModule()
+                print("😇initialized")
+            default:
+                break
+            }
+        }
+    }
+
+    private func startAuthorizationModule() {
+        let module = AuthorizationModule()
+        module.output = self
+        rootViewController.setViewControllers([module.viewController], animated: true)
+    }
+
+    private func startWallModule(withUser user: VKUser) {
+        let state = VkWallState(user: user)
+        let module = VkWallModule(state: state)
+        module.output = self
+        rootViewController.setViewControllers([module.viewController], animated: true)
+    }
+}
+
+//MARK: -  AuthorizationModuleOutput
+
+extension AppCoordinator: AuthorizationModuleOutput {
+
+    func authorizationModuleDidClose(_ moduleInput: AuthorizationModuleInput) {
+
+    }
+
+    func authorizationModuleDidAuthorize(withUser user: VKUser, _ moduleInput: AuthorizationModuleInput) {
+        startWallModule(withUser: user)
+    }
+}
+
+//MARK: -  VkWallModuleOutput
+
+extension AppCoordinator: VkWallModuleOutput {
+    
+    func vkWallModuleDidClose(_ moduleInput: VkWallModuleInput) {
+
     }
 }
