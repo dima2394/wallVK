@@ -9,7 +9,7 @@ extension Date {
 
     var stringDate: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MM YYYY"
+        dateFormatter.dateFormat = "dd MMMM YYYY"
         let stringDate = dateFormatter.string(from: self)
         return stringDate
     }

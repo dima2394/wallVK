@@ -8,8 +8,9 @@ import UIKit
 class VkWallCollectionViewCell: UICollectionViewCell {
 
     private enum Constants {
-        static let insets: UIEdgeInsets = .init(top: 10, left: 10, bottom: 10, right: 10)
+        static let insets: UIEdgeInsets = .init(top: 5, left: 10, bottom: 10, right: 10)
         static let avatarImageViewSide: CGFloat = 50
+        static let likeImageViewSide: CGFloat = 30
     }
 
     private(set) lazy var avatarImageView: UIImageView = {
@@ -22,30 +23,42 @@ class VkWallCollectionViewCell: UICollectionViewCell {
     private(set) lazy var usernameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = .systemFont(ofSize: 13)
+        label.font = .systemFont(ofSize: 15)
         return label
     }()
 
     private(set) lazy var postDateLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
-        label.font = .systemFont(ofSize: 11)
+        label.font = .systemFont(ofSize: 13)
         return label
     }()
 
     private(set) lazy var likeIndicatorImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "no_like_icon")
+        imageView.highlightedImage = UIImage(named: "like_icon")
         return imageView
     }()
 
-    private(set) lazy var viewNumberLabel: UILabel = {
+    private(set) lazy var likeNumberLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
+    }()
+
+    private(set) lazy var repostImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "forward_icon")
+        return imageView
     }()
 
     private(set) lazy var repostNumberLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
 
@@ -62,6 +75,12 @@ class VkWallCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
+    private(set) lazy var errorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.init(white: 0.8, alpha: 0.7)
+        return view
+    }()
+
     private(set) lazy var errorLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -75,22 +94,23 @@ class VkWallCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-        orientationDifference = 0
+        errorView.isHidden = true
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        errorView.addSubview(errorLabel)
         contentView.addSubviews(avatarImageView,
-                                usernameLabel,
-                                postDateLabel,
-//                                likeIndicatorImageView,
-//                                viewNumberLabel,
-//                                repostNumberLabel,
+                                likeIndicatorImageView,
+                                likeNumberLabel,
+                                repostImageView,
+                                repostNumberLabel,
                                 textContentLabel,
                                 contentImageView,
-                                errorLabel)
-        backgroundColor = .white
+                                errorView)
+        backgroundColor = .init(white: 0.9, alpha: 1)
+        contentView.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -108,36 +128,72 @@ class VkWallCollectionViewCell: UICollectionViewCell {
         }
 
         let labeslWidth: CGFloat = frame.size.width - (Constants.insets.left * 2) - Constants.avatarImageViewSide - 5
-        usernameLabel.configureFrame { maker in
-            maker.left(to: avatarImageView.nui_right, inset: 5).top(to: avatarImageView.nui_top, inset: 5)
-            maker.width(labeslWidth).heightToFit()
+        let labelsContainer = [usernameLabel, postDateLabel].container(in: contentView) {
+            usernameLabel.configureFrame { maker in
+                maker.left().top()
+                maker.width(labeslWidth).heightToFit()
+            }
+            postDateLabel.configureFrame { maker in
+                maker.left().top(to: usernameLabel.nui_bottom)
+                maker.width(labeslWidth).heightToFit()
+            }
         }
-        postDateLabel.configureFrame { maker in
-            maker.left(to: usernameLabel.nui_left).top(to: usernameLabel.nui_bottom)
-            maker.width(labeslWidth).heightToFit()
+        labelsContainer.configureFrame { maker in
+            maker.centerY(to: avatarImageView.nui_centerY).left(to: avatarImageView.nui_right, inset: 5)
         }
+
         let textContentLabelWidth: CGFloat = frame.size.width - (Constants.insets.left * 2)
         textContentLabel.configureFrame { maker in
             maker.top(to: avatarImageView.nui_bottom, inset: Constants.insets.top)
             maker.left(to: avatarImageView.nui_left).width(textContentLabelWidth).heightToFit()
         }
         contentImageView.configureFrame { maker in
-            maker.top(to: textContentLabel.nui_bottom, inset: Constants.insets.top)
+            maker.top(to: textContentLabel.nui_bottom)
             if isOrientationDifferenceValid {
                 maker.width(bounds.size.width).height(bounds.size.width / orientationDifference)
             } else {
                 maker.size(width: bounds.size.width, height: 0)
             }
         }
-        errorLabel.configureFrame { maker in
-            if isOrientationDifferenceValid {
-                errorLabel.isHidden = true
-            } else {
-                errorLabel.isHidden = false
-                maker.centerX().top(to: textContentLabel.nui_bottom, inset: Constants.insets.top)
+        likeIndicatorImageView.configureFrame { maker in
+            maker.left(to: avatarImageView.nui_left).top(to: contentImageView.nui_bottom, inset: Constants.insets.top)
+            maker.size(width: Constants.likeImageViewSide, height: Constants.likeImageViewSide)
+        }
+        likeNumberLabel.configureFrame { maker in
+            maker.left(to: likeIndicatorImageView.nui_right).centerY(to: likeIndicatorImageView.nui_centerY)
+            maker.widthThatFits(maxWidth: 150).heightToFit()
+        }
+        repostImageView.configureFrame { maker in
+            maker.left(to: likeNumberLabel.nui_right, inset: 50).centerY(to: likeIndicatorImageView.nui_centerY)
+            maker.size(width: Constants.likeImageViewSide, height: Constants.likeImageViewSide)
+        }
+        repostNumberLabel.configureFrame { maker in
+            maker.left(to: repostImageView.nui_right).centerY(to: likeIndicatorImageView.nui_centerY)
+            maker.widthThatFits(maxWidth: 150).heightToFit()
+        }
+
+        if isOrientationDifferenceValid {
+            errorView.isHidden = true
+        } else {
+            errorView.isHidden = false
+            errorLabel.configureFrame { maker in
+                maker.centerY(to: contentView.nui_centerY)
+                maker.centerX(to: contentView.nui_centerX)
                 maker.sizeToFit()
             }
+            errorView.configureFrame { maker in
+                maker.edges(insets: .zero)
+            }
         }
+//        errorLabel.configureFrame { maker in
+//            if isOrientationDifferenceValid {
+//                errorLabel.isHidden = true
+//            } else {
+//                errorLabel.isHidden = false
+//                maker.centerX().top(to: textContentLabel.nui_bottom, inset: Constants.insets.top)
+//                maker.sizeToFit()
+//            }
+//        }
     }
 
     override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -147,11 +203,13 @@ class VkWallCollectionViewCell: UICollectionViewCell {
         fittingSize.height += Constants.avatarImageViewSide
         fittingSize.height += Constants.insets.top
         fittingSize.height += textContentLabel.sizeThatFits(bounds.size).height
+        fittingSize.height += Constants.likeImageViewSide
         if !orientationDifference.isNaN && orientationDifference != 0 {
             fittingSize.height += size.width / orientationDifference
-        } else {
-            fittingSize.height += errorLabel.sizeThatFits(bounds.size).height
         }
+//        else {
+//            fittingSize.height += errorLabel.sizeThatFits(bounds.size).height
+//        }
         fittingSize.height += Constants.insets.bottom
         return fittingSize
     }

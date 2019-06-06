@@ -12,9 +12,11 @@ final class VkWallCollectionViewCellModel {
     let text: String?
     let avatarImageURL: URL?
     let contentPhotoURL: URL?
+    let repostNumberString: String
     let likesNumberString: String
     let photoWidth: Int
     let photoHeight: Int
+    let isLikedIt: Bool
 
     init(username: String,
          postDateString: String,
@@ -23,7 +25,9 @@ final class VkWallCollectionViewCellModel {
          likesNumberString: String,
          photoWidth: Int,
          photoHeight: Int,
-         avatarImageURL: URL?) {
+         avatarImageURL: URL?,
+         isLikedIt: Bool,
+         repostNumberString: String) {
         
         self.username = username
         self.postDateString = postDateString
@@ -33,6 +37,8 @@ final class VkWallCollectionViewCellModel {
         self.photoWidth = photoWidth
         self.photoHeight = photoHeight
         self.avatarImageURL = avatarImageURL
+        self.isLikedIt = isLikedIt
+        self.repostNumberString = repostNumberString
     }
 }
 

@@ -19,7 +19,9 @@ final class VkWallViewModel {
                                                  likesNumberString: "\(wallRealmModel.likesNumber)",
                                                  photoWidth: wallRealmModel.photoWidth,
                                                  photoHeight: wallRealmModel.photoHeight,
-                                                 avatarImageURL: URL(string: wallRealmModel.userAvatarStringURL))
+                                                 avatarImageURL: URL(string: wallRealmModel.userAvatarStringURL),
+                                                 isLikedIt: wallRealmModel.isLikeIt,
+                                                 repostNumberString: "\(wallRealmModel.repostsNumber)")
         }
 
         var firstname = ""

@@ -24,11 +24,11 @@ final class VkWallViewController: UIViewController {
 
     private(set) lazy var wallCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 5
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .init(white: 0.9, alpha: 1)
+        collectionView.allowsSelection = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerCellClass(VkWallCollectionViewCell.self)
@@ -51,9 +51,12 @@ final class VkWallViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(wallCollectionView)
-        view.backgroundColor = .white
         title = viewModel.title
+        view.backgroundColor = .init(white: 0.9, alpha: 1)
+        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 74/255, green: 118/255, blue: 168/255, alpha: 1.0)
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        view.addSubview(wallCollectionView)
         output.viewDidLoad()
     }
 
@@ -64,8 +67,6 @@ final class VkWallViewController: UIViewController {
             maker.edges(insets: .zero)
         }
     }
-
-    //MARK: -  Actions
 }
 
 //MARK: -  VkWallViewInput
@@ -118,6 +119,9 @@ extension VkWallViewController: UICollectionViewDataSource {
         if let avatarURL = cellModel.avatarImageURL {
             cell.avatarImageView.nuke_setImage(withURL: avatarURL)
         }
+        cell.likeNumberLabel.text = cellModel.likesNumberString
+        cell.likeIndicatorImageView.isHighlighted = cellModel.isLikedIt
+        cell.repostNumberLabel.text = cellModel.repostNumberString
 
         return cell
     }
