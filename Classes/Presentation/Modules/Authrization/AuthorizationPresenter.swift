@@ -29,8 +29,8 @@ extension AuthorizationPresenter: AuthorizationViewOutput {
         update(animated: false)
     }
 
-    func didAuthorize(withUser user: VKUser) {
-        output?.authorizationModuleDidAuthorize(withUser: user, self)
+    func didAuthorize() {
+        output?.authorizationModuleDidAuthorize(self)
     }
 }
 

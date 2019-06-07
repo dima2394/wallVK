@@ -12,7 +12,6 @@
 		066238161F879B4D00AA6B14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066238181F879B4D00AA6B14 /* Localizable.strings */; };
 		06DAD03A1F4E95B700FD62BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06DAD0391F4E95B700FD62BD /* Settings.bundle */; };
 		06E0EBD11FAC0BB4002715AE /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E0EBD01FAC0BB4002715AE /* AppConfigurator.swift */; };
-		6D35B59A216B647100C72B29 /* Bundle+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35B599216B646F00C72B29 /* Bundle+Info.swift */; };
 		6D3A04222170BE06007B6860 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A04212170BE03007B6860 /* AppConfiguration.swift */; };
 		6D6D7E9921F73C90000FFA4D /* ViewUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D7E9821F73C90000FFA4D /* ViewUpdatable.swift */; };
 		6D6D7EA221F743FA000FFA4D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D7EA121F743F9000FFA4D /* Services.swift */; };
@@ -23,6 +22,8 @@
 		7644589022A92CCC005054F3 /* Realm+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644588F22A92CCC005054F3 /* Realm+Result.swift */; };
 		7644589222A93187005054F3 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7644589122A93187005054F3 /* Nuke.framework */; };
 		7644589422A9319C005054F3 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7644589322A9319C005054F3 /* UIImageView+Nuke.swift */; };
+		7653C87422AA6B5900B90811 /* VkWallCollectionFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7653C87322AA6B5900B90811 /* VkWallCollectionFooterReusableView.swift */; };
+		7653C87622AA6D8300B90811 /* VkWallCollectionFooterReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7653C87522AA6D8300B90811 /* VkWallCollectionFooterReusableViewModel.swift */; };
 		768092B022A844D0008C507F /* VkWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AA22A844D0008C507F /* VkWallViewModel.swift */; };
 		768092B122A844D0008C507F /* VkWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AB22A844D0008C507F /* VkWallViewController.swift */; };
 		768092B222A844D0008C507F /* VkWallState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768092AD22A844D0008C507F /* VkWallState.swift */; };
@@ -67,7 +68,6 @@
 		06DAD0391F4E95B700FD62BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		06E0EBD01FAC0BB4002715AE /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		06E0EBD21FAC0D4B002715AE /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		6D35B599216B646F00C72B29 /* Bundle+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
 		6D3A04212170BE03007B6860 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		6D6D7E9821F73C90000FFA4D /* ViewUpdatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUpdatable.swift; sourceTree = "<group>"; };
 		6D6D7EA121F743F9000FFA4D /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
@@ -78,6 +78,8 @@
 		7644588F22A92CCC005054F3 /* Realm+Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Result.swift"; sourceTree = "<group>"; };
 		7644589122A93187005054F3 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		7644589322A9319C005054F3 /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
+		7653C87322AA6B5900B90811 /* VkWallCollectionFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkWallCollectionFooterReusableView.swift; sourceTree = "<group>"; };
+		7653C87522AA6D8300B90811 /* VkWallCollectionFooterReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkWallCollectionFooterReusableViewModel.swift; sourceTree = "<group>"; };
 		768092AA22A844D0008C507F /* VkWallViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallViewModel.swift; sourceTree = "<group>"; };
 		768092AB22A844D0008C507F /* VkWallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallViewController.swift; sourceTree = "<group>"; };
 		768092AD22A844D0008C507F /* VkWallState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VkWallState.swift; sourceTree = "<group>"; };
@@ -245,7 +247,6 @@
 		6D35B598216B5E3A00C72B29 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				6D35B599216B646F00C72B29 /* Bundle+Info.swift */,
 				768092B822A84C07008C507F /* UIView+Sugar.swift */,
 				7644588922A92208005054F3 /* UICollectionView+Sugar.swift */,
 				7644588D22A929F8005054F3 /* Date+PrettyFormat.swift */,
@@ -289,6 +290,8 @@
 			children = (
 				768092B622A84A5A008C507F /* VkWallCollectionViewCell.swift */,
 				7644588B22A922E1005054F3 /* VkWallCollectionViewCellModel.swift */,
+				7653C87322AA6B5900B90811 /* VkWallCollectionFooterReusableView.swift */,
+				7653C87522AA6D8300B90811 /* VkWallCollectionFooterReusableViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -501,8 +504,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				768092C622A86056008C507F /* PhotoModel.swift in Sources */,
+				7653C87422AA6B5900B90811 /* VkWallCollectionFooterReusableView.swift in Sources */,
 				768092B022A844D0008C507F /* VkWallViewModel.swift in Sources */,
 				76DE371322A8302700D9E987 /* AuthorizationState.swift in Sources */,
+				7653C87622AA6D8300B90811 /* VkWallCollectionFooterReusableViewModel.swift in Sources */,
 				768092C422A86019008C507F /* AttachmentModel.swift in Sources */,
 				6D7F58AF22647B89001E2906 /* WeakArray.swift in Sources */,
 				768092BB22A856ED008C507F /* WallModel.swift in Sources */,
@@ -521,7 +526,6 @@
 				768092D422A86EA3008C507F /* WallRealmModel.swift in Sources */,
 				76DE371222A8302700D9E987 /* AuthorizationPresenter.swift in Sources */,
 				768092B322A844D0008C507F /* VkWallModule.swift in Sources */,
-				6D35B59A216B647100C72B29 /* Bundle+Info.swift in Sources */,
 				7644588C22A922E1005054F3 /* VkWallCollectionViewCellModel.swift in Sources */,
 				7644588A22A92208005054F3 /* UICollectionView+Sugar.swift in Sources */,
 				060F086D1E4D6C9200D9166F /* AppDelegate.swift in Sources */,

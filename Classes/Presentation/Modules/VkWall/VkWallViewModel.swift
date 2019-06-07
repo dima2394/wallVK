@@ -3,12 +3,13 @@
 //  Copyright © 2019 dverennik. All rights reserved.
 //
 
-import Foundation
+import VKSdkFramework
 
 final class VkWallViewModel {
 
-    let cellModels: [VkWallCollectionViewCellModel]
     let title: String
+    let cellModels: [VkWallCollectionViewCellModel]
+    let footerModel: VkWallCollectionFooterReusableViewModel
     
     init(state: VkWallState) {
         cellModels = state.wallItems.map { wallRealmModel -> VkWallCollectionViewCellModel in
@@ -26,13 +27,19 @@ final class VkWallViewModel {
 
         var firstname = ""
         var lastname = ""
-        if let firstName = state.user.first_name {
+        if let firstName = VKSdk.accessToken()?.localUser?.first_name {
             firstname = firstName
         }
-        if let lastName = state.user.last_name {
+        if let lastName = VKSdk.accessToken()?.localUser?.last_name {
             lastname = lastName
         }
-        self.title = "\(firstname) \(lastname)"
+        title = "\(firstname) \(lastname)"
+
+        var footerText = "posts"
+        if cellModels.count == 1 {
+            footerText = "post"
+        }
+        footerModel = VkWallCollectionFooterReusableViewModel(title: "\(cellModels.count) \(footerText)")
     }
 }
 
@@ -41,6 +48,8 @@ final class VkWallViewModel {
 extension VkWallViewModel: Equatable {
 
     static func == (lhs: VkWallViewModel, rhs: VkWallViewModel) -> Bool {
-        return lhs.cellModels == rhs.cellModels
+        return lhs.cellModels == rhs.cellModels &&
+            lhs.title == rhs.title &&
+            lhs.title == rhs.title
     }
 }

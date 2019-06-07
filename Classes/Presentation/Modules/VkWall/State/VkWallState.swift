@@ -7,11 +7,9 @@ import VKSdkFramework
 
 final class VkWallState {
 
-    let user: VKUser
     var wallItems: [WallRealmModel]
 
-    init(user: VKUser, wallItems: [WallRealmModel] = []) {
-        self.user = user
+    init(wallItems: [WallRealmModel] = []) {
         self.wallItems = wallItems
     }
 }

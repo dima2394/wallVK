@@ -9,7 +9,7 @@ class VkWallCollectionViewCell: UICollectionViewCell {
 
     private enum Constants {
         static let insets: UIEdgeInsets = .init(top: 5, left: 10, bottom: 10, right: 10)
-        static let avatarImageViewSide: CGFloat = 50
+        static let avatarImageViewSide: CGFloat = 46
         static let likeImageViewSide: CGFloat = 30
     }
 
@@ -23,7 +23,7 @@ class VkWallCollectionViewCell: UICollectionViewCell {
     private(set) lazy var usernameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = .systemFont(ofSize: 15)
+        label.font = .systemFont(ofSize: 14)
         return label
     }()
 
@@ -77,7 +77,7 @@ class VkWallCollectionViewCell: UICollectionViewCell {
 
     private(set) lazy var errorView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.init(white: 0.8, alpha: 0.7)
+        view.backgroundColor = UIColor.init(white: 0.9, alpha: 0.6)
         return view
     }()
 
@@ -90,12 +90,6 @@ class VkWallCollectionViewCell: UICollectionViewCell {
     }()
 
     var orientationDifference: CGFloat = 0
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-
-        errorView.isHidden = true
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -122,7 +116,7 @@ class VkWallCollectionViewCell: UICollectionViewCell {
 
         let isOrientationDifferenceValid = !orientationDifference.isNaN && orientationDifference != 0
         avatarImageView.configureFrame { maker in
-            maker.left(inset: Constants.insets.left).top(inset: Constants.insets.top)
+            maker.left(inset: Constants.insets.left).top(inset: Constants.insets.top * 2)
             maker.size(width: Constants.avatarImageViewSide, height: Constants.avatarImageViewSide)
             maker.cornerRadius(Constants.avatarImageViewSide / 2)
         }
@@ -144,7 +138,7 @@ class VkWallCollectionViewCell: UICollectionViewCell {
 
         let textContentLabelWidth: CGFloat = frame.size.width - (Constants.insets.left * 2)
         textContentLabel.configureFrame { maker in
-            maker.top(to: avatarImageView.nui_bottom, inset: Constants.insets.top)
+            maker.top(to: avatarImageView.nui_bottom, inset: Constants.insets.top * 2)
             maker.left(to: avatarImageView.nui_left).width(textContentLabelWidth).heightToFit()
         }
         contentImageView.configureFrame { maker in
@@ -185,21 +179,12 @@ class VkWallCollectionViewCell: UICollectionViewCell {
                 maker.edges(insets: .zero)
             }
         }
-//        errorLabel.configureFrame { maker in
-//            if isOrientationDifferenceValid {
-//                errorLabel.isHidden = true
-//            } else {
-//                errorLabel.isHidden = false
-//                maker.centerX().top(to: textContentLabel.nui_bottom, inset: Constants.insets.top)
-//                maker.sizeToFit()
-//            }
-//        }
     }
 
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var fittingSize: CGSize = .zero
         fittingSize.width = size.width
-        fittingSize.height += Constants.insets.top
+        fittingSize.height += (Constants.insets.top * 2)
         fittingSize.height += Constants.avatarImageViewSide
         fittingSize.height += Constants.insets.top
         fittingSize.height += textContentLabel.sizeThatFits(bounds.size).height
@@ -207,10 +192,8 @@ class VkWallCollectionViewCell: UICollectionViewCell {
         if !orientationDifference.isNaN && orientationDifference != 0 {
             fittingSize.height += size.width / orientationDifference
         }
-//        else {
-//            fittingSize.height += errorLabel.sizeThatFits(bounds.size).height
-//        }
-        fittingSize.height += Constants.insets.bottom
+
+        fittingSize.height += (Constants.insets.bottom * 2)
         return fittingSize
     }
 }

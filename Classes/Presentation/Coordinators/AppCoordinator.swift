@@ -19,9 +19,7 @@ final class AppCoordinator: Coordinator<UINavigationController> {
         VKSdk.wakeUpSession(["wall"]) { state, error in
             switch state {
             case .authorized:
-                if let user = VKSdk.accessToken()?.localUser {
-                    self.startWallModule(withUser: user)
-                }
+                self.startWallModule()
                 print("😇authorized")
             case .initialized:
                 self.startAuthorizationModule()
@@ -38,8 +36,8 @@ final class AppCoordinator: Coordinator<UINavigationController> {
         rootViewController.setViewControllers([module.viewController], animated: true)
     }
 
-    private func startWallModule(withUser user: VKUser) {
-        let state = VkWallState(user: user)
+    private func startWallModule() {
+        let state = VkWallState()
         let module = VkWallModule(state: state)
         module.output = self
         rootViewController.setViewControllers([module.viewController], animated: true)
@@ -54,8 +52,8 @@ extension AppCoordinator: AuthorizationModuleOutput {
 
     }
 
-    func authorizationModuleDidAuthorize(withUser user: VKUser, _ moduleInput: AuthorizationModuleInput) {
-        startWallModule(withUser: user)
+    func authorizationModuleDidAuthorize(_ moduleInput: AuthorizationModuleInput) {
+        startWallModule()
     }
 }
 

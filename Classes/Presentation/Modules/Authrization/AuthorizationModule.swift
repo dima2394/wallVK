@@ -13,7 +13,7 @@ protocol AuthorizationModuleInput: class {
 
 protocol AuthorizationModuleOutput: class {
     func authorizationModuleDidClose(_ moduleInput: AuthorizationModuleInput)
-    func authorizationModuleDidAuthorize(withUser user: VKUser, _ moduleInput: AuthorizationModuleInput)
+    func authorizationModuleDidAuthorize(_ moduleInput: AuthorizationModuleInput)
 }
 
 final class AuthorizationModule {

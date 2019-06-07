@@ -24,7 +24,7 @@ final class VkWallViewController: UIViewController {
 
     private(set) lazy var wallCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 5
+        layout.minimumInteritemSpacing = 2
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .init(white: 0.9, alpha: 1)
@@ -32,10 +32,12 @@ final class VkWallViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerCellClass(VkWallCollectionViewCell.self)
+        collectionView.registerFooterViewClass(VkWallCollectionFooterReusableView.self)
         return collectionView
     }()
 
     static let sizingCell: VkWallCollectionViewCell = .init()
+    static let sizingFooter: VkWallCollectionFooterReusableView = .init()
 
     //MARK: -  Lifecycle
 
@@ -105,6 +107,14 @@ extension VkWallViewController: UICollectionViewDataSource {
         return viewModel.cellModels.count
     }
 
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footerView: VkWallCollectionFooterReusableView = collectionView.dequeueReusableFooterView(for: indexPath)
+        footerView.titleLabel.text = viewModel.footerModel.title
+        footerView.setNeedsLayout()
+        footerView.layoutIfNeeded()
+        return footerView
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellModel = viewModel.cellModels[indexPath.row]
         let cell: VkWallCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -145,5 +155,11 @@ extension VkWallViewController: UICollectionViewDelegateFlowLayout {
 
         sizingCell.orientationDifference = CGFloat(cellModel.photoWidth) / CGFloat(cellModel.photoHeight)
         return sizingCell.sizeThatFits(collectionView.bounds.size)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        let footerView = type(of: self).sizingFooter
+        footerView.titleLabel.text = viewModel.footerModel.title
+        return footerView.sizeThatFits(collectionView.bounds.size)
     }
 }

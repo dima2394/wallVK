@@ -15,7 +15,7 @@ protocol AuthorizationViewInput: class {
 
 protocol AuthorizationViewOutput: class {
     func viewDidLoad()
-    func didAuthorize(withUser user: VKUser)
+    func didAuthorize()
 }
 
 final class AuthorizationViewController: UIViewController {
@@ -71,19 +71,7 @@ final class AuthorizationViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func authorizationButtonPressed() {
-
-        VKSdk.wakeUpSession(Constants.scope) { state, error in
-            switch state {
-            case .authorized:
-                if let user = VKSdk.accessToken()?.localUser {
-                    self.output.didAuthorize(withUser: user)
-                }
-            case .error:
-                VKSdk.authorize(Constants.scope)
-            default:
-                VKSdk.authorize(Constants.scope)
-            }
-        }
+        VKSdk.authorize(Constants.scope)
     }
 }
 
@@ -116,9 +104,7 @@ extension AuthorizationViewController: AuthorizationViewInput, ViewUpdatable {
 extension AuthorizationViewController: VKSdkDelegate {
 
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-        if let user = VKSdk.accessToken()?.localUser {
-            self.output.didAuthorize(withUser: user)
-        }
+            self.output.didAuthorize()
     }
 
     func vkSdkUserAuthorizationFailed() {
